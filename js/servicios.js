@@ -41,7 +41,8 @@
  */
 
 var SITIO = {
-  nombre: "Sergio Fernández Robledo",
+  marca: "Toca y Listo",              // nombre del negocio: cabecera, pie y título
+  nombre: "Sergio Fernández Robledo", // persona de contacto (sección de contacto)
   lema: "NFC y webs para negocios",
   // CONTACTO OCULTO a propósito hasta que la web esté lista: con estos tres campos vacíos no se muestra
   // ningún teléfono, ni botones de llamar o de WhatsApp, ni la pregunta «¿Cómo pido información?».
@@ -52,7 +53,7 @@ var SITIO = {
   telefono: "",
   telefonoEnlace: "",
   whatsapp: "",
-  mensajeWhatsapp: "Hola Sergio, he visto tu web y me gustaría saber más sobre tus servicios."
+  mensajeWhatsapp: "Hola, he visto la web de Toca y Listo y me gustaría saber más sobre vuestros servicios."
 };
 
 var SERVICIOS = [
