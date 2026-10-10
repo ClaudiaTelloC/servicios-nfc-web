@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarjetas NFC, reseñas y páginas web para negocios · Sergio Fernández Robledo</title>
+  <meta name="description" content="Tarjetas y paneles NFC para conseguir reseñas en Google, cartas y menús en el móvil, tarjetas de contacto y páginas web para negocios y autónomos.">
+  <meta property="og:title" content="Nuestros servicios: NFC y webs para negocios">
+  <meta property="og:description" content="Tus clientes acercan el móvil y listo, sin apps. Reseñas, cartas, contacto y páginas web.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14213d">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="estrella" viewBox="0 0 24 24"><polygon points="12,2 15.1,8.6 22,9.3 16.8,14 18.2,21 12,17.5 5.8,21 7.2,14 2,9.3 8.9,8.6"/></symbol>
+  </svg>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="#inicio" aria-label="Inicio">
+        <span class="marca-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#fff"><use href="#estrella"/></svg>
+        </span>
+        <span><span data-sitio="nombre">Sergio Fernández Robledo</span><small data-sitio="lema">NFC y webs para negocios</small></span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="boton boton--primario" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="contenedor">
+        <div>
+          <span class="etiqueta-hero">Tecnología NFC · Para negocios que quieren destacar</span>
+          <h1>Nuestros <em>servicios</em></h1>
+          <p>Tus clientes acercan el móvil y listo, sin apps ni escribir nada. Que te encuentren, te elijan y te recomienden.</p>
+          <div class="acciones">
+            <a class="boton boton--primario" href="#servicios">Ver servicios</a>
+            <a class="boton boton--borde" data-enlace="telefono" data-requiere="telefono" href="#contacto" hidden>Llamar al <span data-sitio="telefono"></span></a>
+          </div>
+        </div>
+        <div class="hero-arte" aria-hidden="true">
+          <svg viewBox="0 0 420 360">
+            <defs>
+              <linearGradient id="gc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6b4a"/><stop offset="1" stop-color="#ff8f5a"/></linearGradient>
+              <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19c4b0"/><stop offset="1" stop-color="#0d9488"/></linearGradient>
+            </defs>
+            <g transform="rotate(-8 125 232)">
+              <rect x="30" y="172" width="190" height="124" rx="18" fill="url(#gc)"/>
+              <svg x="100" y="190" width="50" height="50" viewBox="0 0 24 24" fill="#fff"><use href="#estrella"/></svg>
+              <rect x="62" y="254" width="126" height="8" rx="4" fill="#fff" opacity=".55"/>
+              <rect x="82" y="270" width="86" height="8" rx="4" fill="#fff" opacity=".35"/>
+            </g>
+            <g transform="rotate(8 330 160)">
+              <rect x="268" y="34" width="130" height="250" rx="26" fill="#0f1a31" stroke="#fff" stroke-width="4"/>
+              <rect x="280" y="58" width="106" height="202" rx="14" fill="url(#gp)"/>
+              <rect x="314" y="42" width="38" height="8" rx="4" fill="#243556"/>
+              <g fill="#ffc23d">
+                <svg x="288" y="84" width="22" height="22" viewBox="0 0 24 24"><use href="#estrella"/></svg>
+                <svg x="316" y="84" width="22" height="22" viewBox="0 0 24 24"><use href="#estrella"/></svg>
+                <svg x="344" y="84" width="22" height="22" viewBox="0 0 24 24"><use href="#estrella"/></svg>
+              </g>
+              <rect x="294" y="130" width="78" height="10" rx="5" fill="#fff" opacity=".75"/>
+              <rect x="294" y="152" width="56" height="10" rx="5" fill="#fff" opacity=".45"/>
+              <rect x="294" y="212" width="78" height="30" rx="15" fill="#fff"/>
+            </g>
+            <g fill="none" stroke="#ffc23d" stroke-width="5" stroke-linecap="round">
+              <path d="M240 132a16 16 0 0 1 0 32"/>
+              <path d="M240 118a30 30 0 0 1 0 60" opacity=".75"/>
+              <path d="M240 104a44 44 0 0 1 0 88" opacity=".5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <svg class="ola" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0,30 C140,-8 280,66 440,32 C580,2 700,12 800,38 L800,60 Z" fill="#fff8ee"/></svg>
+    </section>
+
+    <section id="servicios" class="seccion">
+      <div class="contenedor">
+        <h2>Nuestros servicios</h2>
+        <p class="intro">Todo lo que tu negocio necesita para que lo encuentren, lo elijan y lo recomienden.</p>
+        <div id="lista-servicios" class="servicios"></div>
+        <noscript><p class="aviso">Activa JavaScript para ver los servicios.</p></noscript>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="seccion seccion--clara">
+      <div class="contenedor">
+        <h2>Así de fácil funciona</h2>
+        <p class="intro">Cada tarjeta, panel o pegatina lleva un chip NFC. Tu cliente solo tiene que acercar el móvil.</p>
+        <div class="pasos">
+          <div class="paso"><div class="n">1</div><h3>Acercan el móvil</h3><p>a la tarjeta o al panel.</p></div>
+          <div class="paso"><div class="n">2</div><h3>Se abre tu página</h3><p>al instante, sin apps.</p></div>
+          <div class="paso"><div class="n">3</div><h3>Reseñan o reservan</h3><p>o te llaman: tú decides.</p></div>
+          <div class="paso paso--candado">
+            <div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Con código de seguridad</h3><p>nadie puede cambiar el enlace.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quien" class="seccion">
+      <div class="contenedor">
+        <h2>¿Para quién es?</h2>
+        <p class="intro">Para cualquier negocio que tenga trato directo con sus clientes.</p>
+        <div class="chips">
+          <span class="chip">Restaurantes y bares</span>
+          <span class="chip">Cafeterías</span>
+          <span class="chip">Tiendas y comercios</span>
+          <span class="chip">Talleres</span>
+          <span class="chip">Ocio</span>
+          <span class="chip">Autónomos y oficios</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas" class="seccion seccion--clara">
+      <div class="contenedor">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Mis clientes tienen que instalar algo?</summary>
+            <p>No. Basta con acercar el móvil a la tarjeta. Los iPhone XR y XS en adelante y los móviles Android con el NFC activado la leen sin ninguna aplicación.</p>
+          </details>
+          <details>
+            <summary>¿Se puede cambiar el enlace de una tarjeta?</summary>
+            <p>No: cada tarjeta lleva un código de seguridad que impide cambiarlo. Lo que sí se puede actualizar es el contenido de la página a la que lleva: horarios, carta, precios…</p>
+          </details>
+          <details>
+            <summary>¿Qué incluye la página web?</summary>
+            <p>Un diseño moderno y adaptado al móvil, con horarios, ubicación, carta o catálogo y botón de WhatsApp. La hacemos desde cero o renovamos la que ya tienes.</p>
+          </details>
+          <details>
+            <summary>¿Para qué tipo de negocio sirve?</summary>
+            <p>Para restaurantes, bares, tiendas, talleres, negocios de ocio y autónomos: cualquier negocio que atienda a sus clientes en persona.</p>
+          </details>
+          <details data-requiere="contacto" hidden>
+            <summary>¿Cómo pido información?</summary>
+            <p>Llámanos o escríbenos por WhatsApp. Te decimos qué le falta a tu negocio, sin compromiso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="contenedor">
+        <h2>Hablamos sin compromiso</h2>
+        <p>Te decimos qué le falta a tu negocio, gratis.</p>
+        <a class="telefono" data-enlace="telefono" data-requiere="telefono" data-sitio="telefono" href="#contacto" hidden></a>
+        <p class="telefono-pendiente" data-sin="contacto">Muy pronto: datos de contacto</p>
+        <p class="persona" data-sitio="nombre">Sergio Fernández Robledo</p>
+        <div class="acciones">
+          <a class="boton boton--primario" data-enlace="whatsapp" data-requiere="whatsapp" href="#contacto" hidden>Escribir por WhatsApp</a>
+          <a class="boton boton--claro" data-enlace="telefono" data-requiere="telefono" href="#contacto" hidden>Llamar ahora</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">© <span id="anio">2026</span> <span data-sitio="nombre">Sergio Fernández Robledo</span></div>
+  </footer>
+
+  <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
+    <div id="detalle-contenido"></div>
+  </dialog>
+
+  <script src="js/servicios.js"></script>
+  <script src="js/ilustraciones.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

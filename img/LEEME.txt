@@ -1,0 +1,6 @@
+Fotos reales de los productos.
+
+Pon aquí las fotos (por ejemplo tarjeta-resenas.jpg) y escribe su ruta en el campo foto del servicio, en js/servicios.js:
+    foto: "img/tarjeta-resenas.jpg",
+    fotoAlt: "Tarjeta blanca con el logo de Google",
+La foto sustituye al dibujo de la ventana emergente. Conviene que pese menos de 300 KB.
