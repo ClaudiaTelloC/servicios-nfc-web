@@ -41,19 +41,21 @@
  */
 
 var SITIO = {
-  marca: "Toca y Listo",              // nombre del negocio: cabecera, pie y título
-  nombre: "Sergio Fernández Robledo", // persona de contacto (sección de contacto)
+  marca: "Lo Hacemos Digital",              // nombre del negocio: cabecera, pie y título
+  nombre: "",                  // persona de contacto (vacío a propósito: no se muestra ningún dato personal)
   lema: "NFC y webs para negocios",
-  // CONTACTO OCULTO a propósito hasta que la web esté lista: con estos tres campos vacíos no se muestra
-  // ningún teléfono, ni botones de llamar o de WhatsApp, ni la pregunta «¿Cómo pido información?».
-  // Para activarlo, rellena los tres (el número está anotado en el README del repositorio interno):
+  // CONTACTO: solo se muestra lo que se rellene aquí. Ahora solo está el correo del negocio; sin teléfono, WhatsApp
+  // ni correo no aparece la sección de contacto, ni sus botones, ni la pregunta «¿Cómo pido información?».
+  // Para activarlo, rellena los datos que se quieran mostrar (aparece la sección de contacto):
   //   telefono        como se ve en pantalla, por ejemplo "600 000 000"
   //   telefonoEnlace  con prefijo y sin espacios, por ejemplo "+34600000000"
   //   whatsapp        solo cifras con prefijo, por ejemplo "34600000000" (déjalo vacío si no usa WhatsApp)
+  //   correo          dirección de correo del negocio (se muestra como enlace para escribir)
   telefono: "",
   telefonoEnlace: "",
   whatsapp: "",
-  mensajeWhatsapp: "Hola, he visto la web de Toca y Listo y me gustaría saber más sobre vuestros servicios."
+  correo: "tedigitalizamos4you@gmail.com", // correo del negocio (único dato de contacto que se muestra)
+  mensajeWhatsapp: "Hola, he visto la web de Lo Hacemos Digital y me gustaría saber más sobre vuestros servicios."
 };
 
 var SERVICIOS = [

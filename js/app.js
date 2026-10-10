@@ -33,6 +33,10 @@
     return caja;
   }
 
+  function enlaceCorreo(asunto) {
+    return "mailto:" + SITIO.correo + "?subject=" + encodeURIComponent(asunto);
+  }
+
   function enlaceWhatsapp(texto) {
     return "https://wa.me/" + SITIO.whatsapp + "?text=" + encodeURIComponent(texto);
   }
@@ -113,7 +117,8 @@
 
     var hayWhatsapp = !!SITIO.whatsapp;
     var hayTelefono = !!(SITIO.telefono && SITIO.telefonoEnlace);
-    if (hayWhatsapp || hayTelefono) {
+    var hayCorreo = !!SITIO.correo;
+    if (hayWhatsapp || hayTelefono || hayCorreo) {
       var acciones = el("div", "detalle-acciones");
       if (hayWhatsapp) {
         var wa = el("a", "boton boton--primario", "Pedir información");
@@ -126,6 +131,11 @@
         var tel = el("a", "boton boton--oscuro", "Llamar al " + SITIO.telefono);
         tel.href = "tel:" + SITIO.telefonoEnlace;
         acciones.appendChild(tel);
+      }
+      if (hayCorreo) {
+        var mail = el("a", "boton boton--oscuro", "Escribir un correo");
+        mail.href = enlaceCorreo("Información sobre: " + s.nombre);
+        acciones.appendChild(mail);
       }
       texto.appendChild(acciones);
     }
@@ -229,18 +239,24 @@
 
     // Teléfono y WhatsApp solo se muestran si están rellenados en SITIO (js/servicios.js).
     var hayTelefono = !!(SITIO.telefono && SITIO.telefonoEnlace);
+    var hayCorreo = !!SITIO.correo;
     var hayWhatsapp = !!SITIO.whatsapp;
     document.querySelectorAll("[data-requiere]").forEach(function (nodo) {
       var tipo = nodo.getAttribute("data-requiere");
-      var visible = tipo === "telefono" ? hayTelefono : (tipo === "whatsapp" ? hayWhatsapp : (hayTelefono || hayWhatsapp));
+      var visible = tipo === "telefono" ? hayTelefono : (tipo === "whatsapp" ? hayWhatsapp : (tipo === "correo" ? hayCorreo : (hayTelefono || hayWhatsapp || hayCorreo)));
       nodo.hidden = !visible;
     });
     document.querySelectorAll("[data-sin=contacto]").forEach(function (nodo) {
-      nodo.hidden = hayTelefono || hayWhatsapp;
+      nodo.hidden = hayTelefono || hayWhatsapp || hayCorreo;
     });
     if (hayTelefono) {
       document.querySelectorAll("[data-enlace=telefono]").forEach(function (a) {
         a.setAttribute("href", "tel:" + SITIO.telefonoEnlace);
+      });
+    }
+    if (hayCorreo) {
+      document.querySelectorAll("[data-enlace=correo]").forEach(function (a) {
+        a.setAttribute("href", enlaceCorreo("Información sobre vuestros servicios"));
       });
     }
     if (hayWhatsapp) {
