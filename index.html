@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toca y Listo · Tarjetas NFC, reseñas y páginas web para negocios</title>
+  <title>Lo Hacemos Digital · Tarjetas NFC, reseñas y páginas web para negocios</title>
   <meta name="description" content="Tarjetas y paneles NFC para conseguir reseñas en Google, cartas y menús en el móvil, tarjetas de contacto y páginas web para negocios y autónomos.">
-  <meta property="og:title" content="Toca y Listo: NFC y webs para negocios">
+  <meta property="og:title" content="Lo Hacemos Digital: NFC y webs para negocios">
   <meta property="og:description" content="Tus clientes acercan el móvil y listo, sin apps. Reseñas, cartas, contacto y páginas web.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#14213d">
@@ -24,13 +24,13 @@
         <span class="marca-logo" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="#fff"><use href="#estrella"/></svg>
         </span>
-        <span><span data-sitio="marca">Toca y Listo</span><small data-sitio="lema">NFC y webs para negocios</small></span>
+        <span><span data-sitio="marca">Lo Hacemos Digital</span><small data-sitio="lema">NFC y webs para negocios</small></span>
       </a>
       <nav class="menu" aria-label="Principal">
         <a href="#servicios">Servicios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="boton boton--primario" href="#contacto">Contacto</a>
+        <a class="boton boton--primario" href="#contacto" data-requiere="contacto" hidden>Contacto</a>
       </nav>
     </div>
   </header>
@@ -146,22 +146,23 @@
           </details>
           <details data-requiere="contacto" hidden>
             <summary>¿Cómo pido información?</summary>
-            <p>Llámanos o escríbenos por WhatsApp. Te decimos qué le falta a tu negocio, sin compromiso.</p>
+            <p>Escríbenos o llámanos con los datos de la sección de contacto. Te decimos qué le falta a tu negocio, sin compromiso.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto" data-requiere="contacto" hidden>
       <div class="contenedor">
         <h2>Hablamos sin compromiso</h2>
         <p>Te decimos qué le falta a tu negocio, gratis.</p>
         <a class="telefono" data-enlace="telefono" data-requiere="telefono" data-sitio="telefono" href="#contacto" hidden></a>
-        <p class="telefono-pendiente" data-sin="contacto">Muy pronto: datos de contacto</p>
-        <p class="persona" data-sitio="nombre">Sergio Fernández Robledo</p>
+        <a class="correo" data-enlace="correo" data-requiere="correo" data-sitio="correo" href="#contacto" hidden></a>
+        <p class="persona" data-sitio="nombre"></p>
         <div class="acciones">
           <a class="boton boton--primario" data-enlace="whatsapp" data-requiere="whatsapp" href="#contacto" hidden>Escribir por WhatsApp</a>
           <a class="boton boton--claro" data-enlace="telefono" data-requiere="telefono" href="#contacto" hidden>Llamar ahora</a>
+          <a class="boton boton--primario" data-enlace="correo" data-requiere="correo" href="#contacto" hidden>Escribir un correo</a>
         </div>
       </div>
     </section>
@@ -169,7 +170,7 @@
   </main>
 
   <footer class="pie">
-    <div class="contenedor">© <span id="anio">2026</span> <span data-sitio="marca">Toca y Listo</span></div>
+    <div class="contenedor">© <span id="anio">2026</span> <span data-sitio="marca">Lo Hacemos Digital</span></div>
   </footer>
 
   <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
