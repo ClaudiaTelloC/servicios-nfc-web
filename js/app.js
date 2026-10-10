@@ -117,7 +117,7 @@
       var acciones = el("div", "detalle-acciones");
       if (hayWhatsapp) {
         var wa = el("a", "boton boton--primario", "Pedir información");
-        wa.href = enlaceWhatsapp("Hola Sergio, me interesa: " + s.nombre + ". ¿Me das más información?");
+        wa.href = enlaceWhatsapp("Hola, me interesa: " + s.nombre + ". ¿Me das más información?");
         wa.target = "_blank";
         wa.rel = "noopener";
         acciones.appendChild(wa);
